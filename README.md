@@ -1,43 +1,49 @@
-# Astro Starter Kit: Minimal
+# astro-blog-lab
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This repository is an experimental blog project built with Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The main goals are:
+- learning static site generation workflows
+- exploring blog structure and design
+- gradually experimenting with a headless CMS approach
 
-## 🚀 Project Structure
+This project may remain incomplete, be restructured, or be abandoned.
+That is intentional.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Concept
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Audience: my future self
+- Content style: notes, logs, fragments of thought
+- Tone: quiet, minimal, text-focused
+- Priority: learning and exploration over completion
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The site is designed to work as a static site first.
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## Tech Stack
 
-All commands are run from the root of the project, from a terminal:
+- Astro
+- Markdown
+- CSS
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+No framework choice here is considered final.
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Status
+
+This project is in an early experimental stage.
+
+- structure and directories may change
+- design is incomplete
+- content is mostly placeholder or draft
+
+---
+
+## Notes
+
+This repository is public for visibility and version control.
+It is not intended as a polished product or tutorial.
