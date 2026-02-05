@@ -1,16 +1,39 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
+// posts コレクションを取得
+const posts = await getCollection("posts");
+
+// 日付で新しい順にソート
+const sortedPosts = posts.sort(
+  (a, b) =>
+    new Date(b.data.published_date).getTime() -
+    new Date(a.data.published_date).getTime()
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <header>
+    <h1>
+      <a href="/">ブログタイトル</a>
+    </h1>
+  </header>
+
+  <main>
+    <ul>
+      {sortedPosts.map((post) => (
+        <li>
+          <a href={`/posts/${post.slug}/`}>
+            <span>{post.data.published_date}</span>
+            <span>{post.data.title}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; {new Date().getFullYear()}</p>
+  </footer>
+</BaseLayout>
