@@ -4,7 +4,7 @@ export const collections = {
   posts: defineCollection({
     schema: z.object({
       title: z.string(),
-      published_date: z.string(),
+      published_date: z.date(),
 
       // 記事の性質
       category: z.enum(["blog", "diary"]),
