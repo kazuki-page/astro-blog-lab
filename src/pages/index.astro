@@ -24,7 +24,7 @@ const sortedPosts = posts.sort(
     <ul>
       {sortedPosts.map((post) => (
         <li>
-          <a href={`/posts/${post.slug}/`}>
+          <a href={`/${post.slug}/`}>
             <span>{post.data.published_date}</span>
             <span>{post.data.title}</span>
           </a>
