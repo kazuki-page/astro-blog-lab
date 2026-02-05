@@ -4,7 +4,6 @@ export const collections = {
   posts: defineCollection({
     schema: z.object({
       title: z.string(),
-      slug: z.string(),
       published_date: z.string(),
 
       // 記事の性質
